@@ -28,11 +28,10 @@ services:
       - ./mongo-rs0-3/data:/data/db
 
   setup-rs:
-    image: "setup-rs"
-    build: ./setup
+    image: "mongo"
     depends_on:
       - "mongo-rs0-1"
-    command: bash
+    command: tail -f /dev/null
 
   adminmongo:
     image: "mrvautin/adminmongo"
