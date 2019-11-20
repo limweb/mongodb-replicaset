@@ -32,6 +32,7 @@ services:
     build: ./setup
     depends_on:
       - "mongo-rs0-1"
+    command: bash
 
   adminmongo:
     image: "mrvautin/adminmongo"
