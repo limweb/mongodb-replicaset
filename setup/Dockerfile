@@ -1,7 +1,7 @@
 FROM mongo
 
 # Create app directory
-WORKDIR /usr/src/configs
+WORKDIR /app
 
 # Install app dependencies
 COPY replicaSet.js .
