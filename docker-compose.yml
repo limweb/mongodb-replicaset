@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   mongo-rs0-1:
     image: "mongo-start"
@@ -13,7 +13,7 @@ services:
 
   mongo-rs0-2:
     image: "mongo"
-    command: --replSet rs0 --smallfiles --oplogSize 128
+    command: --replSet rs0  --oplogSize 128
     ports:
       - "27018:27017"
     volumes:
@@ -21,7 +21,7 @@ services:
 
   mongo-rs0-3:
     image: "mongo"
-    command: --replSet rs0 --smallfiles --oplogSize 128
+    command: --replSet rs0  --oplogSize 128
     ports:
       - "27019:27017"
     volumes:
