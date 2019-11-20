@@ -29,9 +29,12 @@ services:
 
   setup-rs:
     image: "mongo"
+    volumes:
+      - ./setup.sh:/app/setup.sh
+      - ./replicaSet.js:/app/replicaSet.js
     depends_on:
       - "mongo-rs0-1"
-    command: tail -f /dev/null
+    command: ./setup.sh
 
   adminmongo:
     image: "mrvautin/adminmongo"
