@@ -52,3 +52,20 @@ services:
       - /usr/src/app/node_modules
     depends_on:
       - "setup-rs"
+
+  portainer:
+    image: "portainer/portainer:latest"
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000"
+    expose:
+      - "9000"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "portainer_data:/data"
+
+volumes:
+  portainer_data:
+    name: portainer_data
+    driver: local
