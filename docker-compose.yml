@@ -36,7 +36,7 @@ services:
       - "mongo-rs0-1"
       - "mongo-rs0-2"
       - "mongo-rs0-3"
-    command: ./setup.sh
+    command: "sleep 1h"
 
   adminmongo:
     image: "mrvautin/adminmongo"
