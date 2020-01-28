@@ -36,7 +36,7 @@ services:
       - "mongo-rs0-1"
       - "mongo-rs0-2"
       - "mongo-rs0-3"
-    command: "sleep 1h"
+    command: "/bin/bash /app/setup.sh  /app/replicaSet.js"
 
   adminmongo:
     image: "mrvautin/adminmongo"
