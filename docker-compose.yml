@@ -29,6 +29,7 @@ services:
 
   setup-rs:
     image: "mongo"
+    working_dir: /app
     volumes:
       - ./setup/setup.sh:/app/setup.sh
       - ./setup/replicaSet.js:/app/replicaSet.js
