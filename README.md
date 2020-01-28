@@ -14,7 +14,15 @@ docker-compose up
 * mongodb://mongo-rs0-2
 * mongodb://mongo-rs0-3
 
+## Start Replica Set commands
+  docker exec -it <container setup id> bash  
+      cd /app
+      chmod 777 .
+      ./setup.sh
+  
+
 ## Some commands for experimenting with the replica set
+
 
 * docker exec mongodb-replicaset_mongo-rs0-1_1 bash -c 'mongo --eval "rs.status();"'
 * docker stop mongodb-replicaset_mongo-rs0-2_1
