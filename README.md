@@ -15,7 +15,7 @@ docker-compose up
 * mongodb://mongo-rs0-3
 
 ## Start Replica Set commands
-  docker exec -it <container setup id> bash  
+  docker exec -it container_setup_id bash 
       cd /app
       chmod 777 .
       ./setup.sh
