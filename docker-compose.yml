@@ -36,7 +36,7 @@ services:
       - "mongo-rs0-1"
       - "mongo-rs0-2"
       - "mongo-rs0-3"
-    command: "cd /app && chmod 777 . && ./setup.sh"
+    command: "/bin/bash /app/setup.sh"
 
   adminmongo:
     image: "mrvautin/adminmongo"
